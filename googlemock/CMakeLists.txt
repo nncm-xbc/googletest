@@ -168,7 +168,7 @@ if (gmock_build_tests)
 
   # gmock_all_test is commented to save time building and running tests.
   # Uncomment if necessary.
-  # cxx_test(gmock_all_test gmock_main)
+  cxx_test(gmock_all_test gmock_main)
 
   ############################################################
   # C++ tests built with non-standard compiler flags.

@@ -12,6 +12,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'cd build'
+                sh 'make test'
             }
         }
         stage('Deploy') {
