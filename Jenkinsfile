@@ -12,10 +12,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'cd build'
-                sh 'pwd'
-                sh 'ls'
-                sh 'make test'
+                sh 'chmod +x Scripts/test.sh'
+                sh 'Scripts/test.sh'
             }
         }
         stage('Deploy') {
