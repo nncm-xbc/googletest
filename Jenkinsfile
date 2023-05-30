@@ -13,6 +13,8 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'cd build'
+                sh 'pwd'
+                sh 'ls'
                 sh 'make test'
             }
         }
