@@ -16,9 +16,11 @@ pipeline {
                 sh 'Scripts/test.sh'
             }
         }
-        stage('Deploy') {
+        stage('Docker Image') {
             steps {
-                echo 'Deploying....'
+                echo 'Building Docker Image..'
+                sh 'chmod +x Scripts/docker.sh'
+                sh 'Scripts/docker.sh'
             }
         }
     }
