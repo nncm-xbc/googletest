@@ -5,6 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'chmod +x Scripts/docker.sh'
+                sh 'Scripts/docker.sh'
+            }
+        }
+        stage('Normal Build') {
+            steps {
+                echo 'Building..'
                 sh 'chmod +x Scripts/build.sh'
                 sh 'Scripts/build.sh'
             }
@@ -14,13 +21,6 @@ pipeline {
                 echo 'Testing..'
                 sh 'chmod +x Scripts/test.sh'
                 sh 'Scripts/test.sh'
-            }
-        }
-        stage('Docker Image') {
-            steps {
-                echo 'Building Docker Image..'
-                sh 'chmod +x Scripts/docker.sh'
-                sh 'Scripts/docker.sh'
             }
         }
     }
