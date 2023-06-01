@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t googletest_img .
+docker build --pull --rm -f "Dockerfile" -t googletest:latest "." 
