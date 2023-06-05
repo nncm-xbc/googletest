@@ -26,7 +26,7 @@
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
+//test comment 
 #include <iostream>
 
 #include "gmock/gmock.h"
@@ -49,6 +49,7 @@ void loop() { RUN_ALL_TESTS(); }
 
 #else
 
+
 // MS C++ compiler/linker has a bug on Windows (not on Windows CE), which
 // causes a link error when _tmain is defined in a static library and UNICODE
 // is enabled. For this reason instead of _tmain, main function is used on
@@ -70,3 +71,10 @@ GTEST_API_ int main(int argc, char** argv) {
   return RUN_ALL_TESTS();
 }
 #endif
+
+int main() 
+{
+code;
+1+1;
+code;
+}
