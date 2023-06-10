@@ -22,7 +22,7 @@ pipeline {
 		}
         stage('Push to docker hub') {
 			steps {
-				sh 'docker push $DOCKERHUB_CREDENTIALS_USR/latest'
+				sh 'docker push latest'
 			}
 		}
         stage('Normal Build') {
