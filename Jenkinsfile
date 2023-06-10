@@ -20,7 +20,7 @@ pipeline {
 		}
         stage('Push to docker hub') {
 			steps {
-				sh 'docker nncmxbc/googletest:latest'
+				sh 'docker push nncmxbc/googletest:latest'
 			}
 		}
         stage('Normal Build') {
