@@ -9,12 +9,14 @@ pipeline {
         stage('Build image') {
             steps {
                 echo 'Building..'
-                sh 'chmod +x Scripts/docker.sh'
-                sh 'Scripts/docker.sh'
+                sh '#chmod +x Scripts/docker.sh'
+                sh '#Scripts/docker.sh'
             }
         }
         stage('Login in docker hub') {
 			steps {
+				sh '$DOCKERHUB_CREDENTIALS_USR'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW'
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
 		}
