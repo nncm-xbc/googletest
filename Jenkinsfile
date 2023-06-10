@@ -22,7 +22,7 @@ pipeline {
 		}
         stage('Push to docker hub') {
 			steps {
-				sh 'docker push googletest:latest'
+				sh 'docker push $DOCKERHUB_CREDENTIALS_USR/googletest:latest'
 			}
 		}
         stage('Normal Build') {
