@@ -42,6 +42,8 @@ int main() {
   input.close();
   output.close();
 
+  std::cout << "All completed - exiting." << std::endl;
+
   return 0;
 }
 
