@@ -9,8 +9,8 @@ pipeline {
         stage('Build image') {
             steps {
                 echo 'Building..'
-                sh '#chmod +x Scripts/docker.sh'
-                sh '#Scripts/docker.sh'
+                sh 'chmod +x Scripts/docker.sh'
+                sh 'Scripts/docker.sh'
             }
         }
         stage('Login in docker hub') {
