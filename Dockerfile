@@ -10,4 +10,4 @@ RUN apt update && apt install -y build-essential && apt install -y make && apt i
 WORKDIR /googletest
 
 # run make
-RUN sh Scripts/build.sh
+RUN sh Scripts/build_no_tests.sh
