@@ -6,7 +6,7 @@ pipeline {
 	}
 
     stages {
-	stage('Previous Images Cleaning') {
+	stage('Memory Optimization') {
 		steps {
 			echo 'Deleting previous images, which have been uploaded to DockerHub'
 			sh 'docker system prune -a --force' 
