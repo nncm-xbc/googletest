@@ -6,6 +6,12 @@ pipeline {
 	}
 
     stages {
+	stage('Previous Images Cleaning') {
+		steps {
+			echo 'Deleting previous images, which have been uploaded to DockerHub'
+			sh 'docker system prune -a --force' 
+		}
+	}    
         stage('Normal Build') {
             steps {
                 echo 'Building..'
